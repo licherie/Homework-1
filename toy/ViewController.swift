@@ -71,8 +71,6 @@ class ViewController: UIViewController {
         else {
             ready_to_submit()
         }
-        print("This view has loaded.")
-       
         // Do any additional setup after loading the view, typically from a nib.
     }
     override func didReceiveMemoryWarning() {
