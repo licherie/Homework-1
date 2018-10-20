@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
-    
     @IBOutlet weak var signLabel: UILabel!
     var submitpressed : Bool = false
     @IBOutlet weak var nametextfield: UITextField!
@@ -49,7 +48,7 @@ class ViewController: UIViewController {
             displaylabel.isHidden = false
             let name = nametextfield.text ?? ""
             let sign = signtextfield.text ?? ""
-            displaylabel.text = "So, " + name + "you are a " + sign
+            displaylabel.text = "So, " + name + " you are a " + sign
             nametextfield.text = ""
             signtextfield.text = ""
             displaylabel.isHidden = false
@@ -70,6 +69,10 @@ class ViewController: UIViewController {
         }
         else {
             ready_to_submit()
+        }
+        if (Word.count == 0) {
+            Word.addVerb(name: "いく", meaning: #imageLiteral(resourceName: "20100613-222"), potentialform: "いける", teform: "言って")
+              Word.addVerb(name: "食べる", meaning: #imageLiteral(resourceName: "15683193341_7a3594dd53_k"), potentialform: "食べられる", teform: "食べて")
         }
         // Do any additional setup after loading the view, typically from a nib.
     }
