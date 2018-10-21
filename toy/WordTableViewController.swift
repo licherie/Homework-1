@@ -43,9 +43,9 @@ class WordTableViewController: UITableViewController {
         }
         // Configure the cell...
    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 220
+        return 200
     }
-    }
+    
 
 
 
@@ -84,14 +84,29 @@ class WordTableViewController: UITableViewController {
     }
     */
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "ViewWordDetails")
+        {
+            let DestTableVC = segue.destination as! WordDetailViewController
+            let indexPath = self.tableView.indexPath(for: sender as! WordTableViewCell)
+            let row = indexPath?.row
+            DestTableVC.name =
+                Word.wordArr[row!].name
+            DestTableVC.meaning =
+                Word.wordArr[row!].meaning
+            DestTableVC.potentialForm =
+                Word.wordArr[row!].potentialform
+            DestTableVC.teForm =
+                Word.wordArr[row!].teform
+            
+        }
+}
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-    }
-    */
 
+}
 

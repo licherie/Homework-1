@@ -10,10 +10,11 @@
 		C1714432217BDF680075D1EF /* WordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1714431217BDF680075D1EF /* WordTableViewController.swift */; };
 		C1714434217BDF780075D1EF /* WordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1714433217BDF780075D1EF /* WordTableViewCell.swift */; };
 		C171443A217BE8860075D1EF /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1714439217BE8860075D1EF /* Word.swift */; };
+		C171443C217BFE570075D1EF /* WordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C171443B217BFE570075D1EF /* WordDetailViewController.swift */; };
+		C171443E217C32AB0075D1EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C171443D217C32AB0075D1EF /* Assets.xcassets */; };
 		C1E0B9EB217292C00049822B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E0B9EA217292C00049822B /* AppDelegate.swift */; };
 		C1E0B9ED217292C00049822B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E0B9EC217292C00049822B /* ViewController.swift */; };
 		C1E0B9F0217292C00049822B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1E0B9EE217292C00049822B /* Main.storyboard */; };
-		C1E0B9F2217292C10049822B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1E0B9F1217292C10049822B /* Assets.xcassets */; };
 		C1E0B9F5217292C10049822B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1E0B9F3217292C10049822B /* LaunchScreen.storyboard */; };
 		C1E0BA00217292C10049822B /* toyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E0B9FF217292C10049822B /* toyTests.swift */; };
 		C1E0BA0B217292C10049822B /* toyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E0BA0A217292C10049822B /* toyUITests.swift */; };
@@ -40,11 +41,12 @@
 		C1714431217BDF680075D1EF /* WordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTableViewController.swift; sourceTree = "<group>"; };
 		C1714433217BDF780075D1EF /* WordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTableViewCell.swift; sourceTree = "<group>"; };
 		C1714439217BE8860075D1EF /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		C171443B217BFE570075D1EF /* WordDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetailViewController.swift; sourceTree = "<group>"; };
+		C171443D217C32AB0075D1EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 		C1E0B9E7217292C00049822B /* toy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E0B9EA217292C00049822B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1E0B9EC217292C00049822B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C1E0B9EF217292C00049822B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C1E0B9F1217292C10049822B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1E0B9F4217292C10049822B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1E0B9F6217292C10049822B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1E0B9FB217292C10049822B /* toyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = toyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,12 +116,13 @@
 				C1E0B9EA217292C00049822B /* AppDelegate.swift */,
 				C1E0B9EC217292C00049822B /* ViewController.swift */,
 				C1714431217BDF680075D1EF /* WordTableViewController.swift */,
+				C171443B217BFE570075D1EF /* WordDetailViewController.swift */,
 				C1714433217BDF780075D1EF /* WordTableViewCell.swift */,
 				C1714435217BE5770075D1EF /* Models */,
 				C1E0B9EE217292C00049822B /* Main.storyboard */,
-				C1E0B9F1217292C10049822B /* Assets.xcassets */,
 				C1E0B9F3217292C10049822B /* LaunchScreen.storyboard */,
 				C1E0B9F6217292C10049822B /* Info.plist */,
+				C171443D217C32AB0075D1EF /* Assets.xcassets */,
 			);
 			path = toy;
 			sourceTree = "<group>";
@@ -247,7 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1E0B9F5217292C10049822B /* LaunchScreen.storyboard in Resources */,
-				C1E0B9F2217292C10049822B /* Assets.xcassets in Resources */,
+				C171443E217C32AB0075D1EF /* Assets.xcassets in Resources */,
 				C1E0B9F0217292C00049822B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +281,7 @@
 				C171443A217BE8860075D1EF /* Word.swift in Sources */,
 				C1714432217BDF680075D1EF /* WordTableViewController.swift in Sources */,
 				C1714434217BDF780075D1EF /* WordTableViewCell.swift in Sources */,
+				C171443C217BFE570075D1EF /* WordDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
