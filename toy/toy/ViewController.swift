@@ -71,18 +71,22 @@ class ViewController: UIViewController {
             ready_to_submit()
         }
         if (Word.count == 0) {
+            Word.loadVerb{ (result) in
+                for dict in result {
+                    let imageURL = URL(string: dict["meaning"]!)
+                    let image = UIImage(data: try! Data(contentsOf: imageURL!))
+                    Word.addVerb(name: dict["name"]!, meaning: image!,
+                    potentialform: dict["potentialform"]!, teform: dict["teform"]!)
             
-//            Word.addVerb(name: "いく", meaning: #imageLiteral(resourceName: "pandaWalking"), potentialform: "いける", teform: "言って")
-//              Word.addVerb(name: "食べる", meaning: #imageLiteral(resourceName: "pandasEating"), potentialform: "食べられる", teform: "食べて")
-            Word.loadVerb()
-            
+            }
         }
         // Do any additional setup after loading the view, typically from a nib.
     }
-    override func didReceiveMemoryWarning() {
+        func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
 
 }
 
+}

@@ -24,7 +24,8 @@ class Word: NSObject {
         wordArr.append(WordCellInfo(name: name, meaning: meaning, potentialform: potentialform, teform: teform))
         count += 1
     }
-    class func loadVerb() -> Void{
+    class func loadVerb(completion : @escaping (Array<Dictionary<String,String>>) -> Void)
+        -> Void{
         let url = URL(string: "https://raw.githubusercontent.com/licherie/ios-appdev-Assignments/master/toy/Words.json")
         let session = URLSession(configuration: .default)
         var request = URLRequest(url :url!)
@@ -39,17 +40,10 @@ class Word: NSObject {
             let result =
                 try? JSONSerialization.jsonObject(with: data!, options: [])
                     as! Array<Dictionary<String,String>>
-            print(result)
-            for dict in result! {
-                print(dict)
-                let imageURL = URL(string: dict["meaning"]!)
-                print(imageURL)
-                let image = UIImage(data: try! Data(contentsOf: imageURL!))
-                Word.addVerb(name: dict["name"]!, meaning: image!,
-                             potentialform: dict["potentialform"]!, teform: dict["teform"]!)
+            completion(result!)
+
             }
-        }
         task.resume()
     }
-}
 
+}
