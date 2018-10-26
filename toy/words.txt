@@ -1,6 +1,6 @@
 [{"name": "着る",
 "meaning": "https://eikaiwa-highway.com/wp-content/uploads/2017/01/puttint-on-coat-0110.jpg",
- "potentialform": "着られる", "teform": "着て"},
+ "potential": "着られる", "teform": "着て"},
  {"name": "買う",
  "meaning": "https://img.sirabee.com/wp/wp-content/uploads/2018/10/GettyImages-994863300-600x400.jpg",
  "potentialform": "買える", "teform": "買って"},
