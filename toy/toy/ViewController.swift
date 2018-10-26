@@ -71,8 +71,11 @@ class ViewController: UIViewController {
             ready_to_submit()
         }
         if (Word.count == 0) {
-            Word.addVerb(name: "いく", meaning: #imageLiteral(resourceName: "pandaWalking"), potentialform: "いける", teform: "言って")
-              Word.addVerb(name: "食べる", meaning: #imageLiteral(resourceName: "pandasEating"), potentialform: "食べられる", teform: "食べて")
+            
+//            Word.addVerb(name: "いく", meaning: #imageLiteral(resourceName: "pandaWalking"), potentialform: "いける", teform: "言って")
+//              Word.addVerb(name: "食べる", meaning: #imageLiteral(resourceName: "pandasEating"), potentialform: "食べられる", teform: "食べて")
+            Word.loadVerb()
+            
         }
         // Do any additional setup after loading the view, typically from a nib.
     }
