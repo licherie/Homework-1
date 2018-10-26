@@ -1,0 +1,11 @@
+[{"name": "着る",
+"meaning": "https://eikaiwa-highway.com/wp-content/uploads/2017/01/puttint-on-coat-0110.jpg",
+ "potential": "着られる", "teform": "着て"},
+ {"name": "買う",
+ "meaning": "https://img.sirabee.com/wp/wp-content/uploads/2018/10/GettyImages-994863300-600x400.jpg",
+ "potentialform": "買える", "teform": "買って"},
+ {"name": "辞める",
+ "meaning": "https://dol.ismcdn.jp/mwimgs/8/4/670m/img_846f813a14d6a15712a4e2b08fe5534222443.jpg",
+ "potentialform": "辞められる", "teform": "辞めて"},
+ {"name": "作る", "meaning": "https://www.fumira.jp/cut/hoikuen/img6/itodenwa3_soft.jpg",
+ "potentialform": "作れる", "teform": "作って"}]
