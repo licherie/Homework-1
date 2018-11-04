@@ -8,7 +8,26 @@
 
 import UIKit
 
+extension UIViewController{
+    @objc func dismissKBWTA() {
+    
+        let tap :
+            UITapGestureRecognizer =
+            UITapGestureRecognizer(target: self, action: #selector(dismissKBWTA))
+        view.addGestureRecognizer(tap)
+}
+    func dismissKeyboard() {
+        view.endEditing(false)
+    }
+    
+}
+
 class ViewController: UIViewController {
+    
+    
+    @IBAction func AddVerbButtonPressed(_ sender: Any) {
+    }
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var signLabel: UILabel!
     var submitpressed : Bool = false
@@ -61,6 +80,7 @@ class ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        dismissKBWTA()
         if (UserDefaults.standard.object(forKey: "name") != nil && UserDefaults.standard.object(forKey: "sign") != nil){
             let name = UserDefaults.standard.string(forKey: "name") ?? ""
             let sign = UserDefaults.standard.string(forKey: "sign") ?? ""
