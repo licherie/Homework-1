@@ -29,12 +29,19 @@ class ViewController: UIViewController {
     }
     
     @IBOutlet weak var nameLabel: UILabel!
+    
     @IBOutlet weak var signLabel: UILabel!
+    
     var submitpressed : Bool = false
+    
     @IBOutlet weak var nametextfield: UITextField!
+    
     @IBOutlet weak var signtextfield: UITextField!
+    
     @IBOutlet weak var SubmitButton: UIButton!
+    
     @IBOutlet weak var displaylabel: UILabel!
+    
     func ready_to_clear() -> Void {
         nameLabel.isHidden = true
         signLabel.isHidden = true
@@ -44,6 +51,7 @@ class ViewController: UIViewController {
         SubmitButton.setTitle("Clear", for: .normal)
         submitpressed = true
     }
+    
     func ready_to_submit() -> Void {
         nameLabel.isHidden = false
         signLabel.isHidden = false
@@ -53,6 +61,7 @@ class ViewController: UIViewController {
         SubmitButton.setTitle("Submit", for: .normal)
         submitpressed = false
     }
+    
     @IBAction func submitbuttontapped(_ sender: Any) {
         if(submitpressed) {
             UserDefaults.standard.removeObject(forKey: "name")
@@ -78,6 +87,7 @@ class ViewController: UIViewController {
             ready_to_clear()
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         dismissKBWTA()
@@ -104,9 +114,7 @@ class ViewController: UIViewController {
     }
         func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        }
     }
-
-
-}
 
 }

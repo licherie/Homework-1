@@ -27,9 +27,9 @@ class AddVerbViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBAction func ClearButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         TableView.delegate = self
         TableView.dataSource = self
         DoneButton.isEnabled = false
@@ -37,9 +37,7 @@ class AddVerbViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     //MARK: - Table View Methods
     func numberOfSections(in tableView: UITableView) -> Int {
-        print("number of sections : 2")
         return 2
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -69,7 +67,6 @@ class AddVerbViewController: UIViewController, UITableViewDelegate, UITableViewD
             cell.TextView.isUserInteractionEnabled = true
             
             if (indexPath.row == 0){
-                print("cell Name")
                 cell.TextView.text = "Name"
             } else {
                 cell.TextView.text = "PotentialForm"
@@ -94,7 +91,6 @@ class AddVerbViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         
         cell.CreateVerbViewController = self
-        
         return cell
     }
     

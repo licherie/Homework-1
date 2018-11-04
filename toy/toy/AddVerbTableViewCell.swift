@@ -11,12 +11,15 @@ import UIKit
 struct MyTeForm {
     static var teform = ""
 }
+
 struct MyName{
     static var name = ""
 }
+
 struct MyPotentialForm{
     static var potentialform = ""
 }
+
 class AddVerbTableViewCell: UITableViewCell, UITextViewDelegate,
 UIPickerViewDelegate, UIPickerViewDataSource{
     
@@ -27,7 +30,6 @@ UIPickerViewDelegate, UIPickerViewDataSource{
     @IBOutlet weak var PickerView: UIPickerView!
     
     func canSubmit() -> Bool {
-        print(MyTeForm.teform)
         return MyTeForm.teform != "" && MyPotentialForm.potentialform != "" && MyName.name != ""
     }
     
@@ -36,7 +38,6 @@ UIPickerViewDelegate, UIPickerViewDataSource{
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        print("picker view")
         PickerView.delegate = self
         PickerView.dataSource = self
         TextView.delegate = self
@@ -59,9 +60,11 @@ UIPickerViewDelegate, UIPickerViewDataSource{
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return 7
     }
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row]
     }
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         MyTeForm.teform = pickerData[row]
         // reload the second section to change data
@@ -82,6 +85,7 @@ UIPickerViewDelegate, UIPickerViewDataSource{
             textView.textColor = UIColor.black
         }
     }
+    
     func textViewDidChange(_ textView: UITextView) {
         if(textView.tag == 0) {
             MyName.name = textView.text
@@ -94,6 +98,7 @@ UIPickerViewDelegate, UIPickerViewDataSource{
             CreateVerbViewController?.DoneButton.isEnabled = false
         }
     }
+    
     func textViewDidEndEditing(_ textView: UITextView) {
         if (textView.text == ""){
             if(textView.tag == 0) {
