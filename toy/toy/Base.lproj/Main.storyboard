@@ -363,7 +363,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="96f-j8-v9w"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="feb-FZ-k6Q" customClass="MyUITabBarItem" customModule="toy" customModuleProvider="target">
+                    <tabBarItem key="tabBarItem" title="" id="feb-FZ-k6Q">
                         <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
                     </tabBarItem>
                 </viewController>

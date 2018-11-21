@@ -33,8 +33,10 @@ class AddVerbViewController: UIViewController, UITableViewDelegate, UITableViewD
         TableView.delegate = self
         TableView.dataSource = self
         DoneButton.isEnabled = false
+        
         // Do any additional setup after loading the view.
     }
+    
     //MARK: - Table View Methods
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -86,6 +88,9 @@ class AddVerbViewController: UIViewController, UITableViewDelegate, UITableViewD
                 cell.TextView.isHidden = false
             } else {
                 cell.TextView.isHidden = true
+                cell.PickerView.selectRow(selected,
+                                          inComponent: 0,
+                               animated: false)
                 cell.PickerView.isHidden = false
             }
         }
@@ -113,6 +118,7 @@ class AddVerbViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(indexPath.section == 1 && indexPath.row == 0) {
             if(isPickerViewOpened){
+                
                 isPickerViewOpened = false
             } else {
                 isPickerViewOpened = true

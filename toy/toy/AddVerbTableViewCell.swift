@@ -8,6 +8,8 @@
 
 import UIKit
 
+var selected = 0
+
 struct MyTeForm {
     static var teform = ""
 }
@@ -43,14 +45,14 @@ UIPickerViewDelegate, UIPickerViewDataSource{
         TextView.delegate = self
         // Initialization code
         pickerData = ["って", "んで", "いて", "いで", "して", "いって", "きて"]
-
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+       
         // Configure the view for the selected state
     }
+    
     //MARK:  - Picker View Methods
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -60,16 +62,20 @@ UIPickerViewDelegate, UIPickerViewDataSource{
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return 7
     }
-    
+   
+
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selected = row
         MyTeForm.teform = pickerData[row]
         // reload the second section to change data
         //how can we access table view if it's in another class?
+
     CreateVerbViewController?.TableView.reloadSections(IndexSet.init(integer: 1), with :.automatic)
+        
         if (canSubmit()) {
             CreateVerbViewController?.DoneButton.isEnabled = true
         } else {
